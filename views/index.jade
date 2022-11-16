@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h1= title
+  if enable_feature_x
+    p#x ✅ Yay, we have FEATURE X! ✅
+  else
+    p#x ❌ Nope, no feature X. ❌
+
