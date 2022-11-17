@@ -12,12 +12,12 @@ The app has two tiny features, each of which is controlled by a distinct flag. T
 * Flag `enable-feature-x`
   * Type: boolean
   * Effect: changes a display message on the front page.
-  * Evaluated by: NodeJS ([`routes/index.js`](blob/master/routes/index.js))
+  * Evaluated by: NodeJS ([`routes/index.js`](routes/index.js))
 * Flag `set-heading-color`
   * Type: string 
   * Variations: `red`, `green`, `black`
   * Effect: Set the color of the main heading on the front page.
-  * Evaluated by: Browser JS ([`public/javascripts/header_color.js`](blob/master/public/javascripts/header_color.js))
+  * Evaluated by: Browser JS ([`public/javascripts/header_color.js`](public/javascripts/header_color.js))
 
 The app very basic Express app, with two special middleware functions:
 
@@ -30,7 +30,7 @@ For example, the `enable-feature-x` flag defaults to serving `false`, and has th
 
 * **IF** `TESTFLAG_enable-feature-x` **is one of** `true` (str) **SERVE** `true`
 
-To test the app with the flag serving `true`, the test spec doesn't need to change the flag; it just sets a cookie in the automated browser. See [`cypress/e2e/ld-testing-demo/feature_x.cy.js`](blob/master/cypress/e2e/ld-testing-demo/feature_x.cy.js) for the test code.
+To test the app with the flag serving `true`, the test spec doesn't need to change the flag; it just sets a cookie in the automated browser. See [`cypress/e2e/ld-testing-demo/feature_x.cy.js`](cypress/e2e/ld-testing-demo/feature_x.cy.js) for the test code.
 
 ## Setup
 
