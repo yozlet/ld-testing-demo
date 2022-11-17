@@ -27,7 +27,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// LaunchDarkly client middleware:
+// LaunchDarkly SDK middleware:
 // Adds the ldClient and an empty context object to the request object
 app.use(function(req, res, next) {
   req.ldClient = ldClient;
