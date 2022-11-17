@@ -1,3 +1,6 @@
+// Replace this ID with the Client ID for your LaunchDarkly environment
+const LD_CLIENT_ID = '63747f12b4353c10dbe2636f';
+
 // Create user context object
 const userContext = {
   key: 'anon',
@@ -17,7 +20,7 @@ cookies.forEach(cookie => {
 });
 
 // Initialise the LaunchDarkly client
-const ldClient = LDClient.initialize('63747f12b4353c10dbe2636f', userContext);
+const ldClient = LDClient.initialize(LD_CLIENT_ID, userContext);
 
 ldClient.on('ready', () => {
   const heading = document.getElementsByTagName('h1').item(0);

@@ -39,6 +39,9 @@ To test the app with the flag serving `true`, the test spec doesn't need to chan
     * yarn
 2. Clone this repository locally.
 3. Within the repository folder, run `yarn` to install the dependencies.
+4. Create a LaunchDarkly project with the flags listed above: `enable-feature-x`, `set-heading-color`, `set-flag-context-with-cookies`
+5. Add the SDK key for the project's `test` environment to `.env.example`, and rename that file to `.env`
+6. Add the Client ID for the project's `test` environment to `public/javascripts/header_color.js`, replacing the existing Client ID on line 2.
 
 ## Running the app
 
